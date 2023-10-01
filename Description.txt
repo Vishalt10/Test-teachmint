@@ -1,0 +1,30 @@
+Code description-:
+
+The provided python code contains suitable classes with suitable methods to define users and add expenses in accordance to the different types of split function mentioned in the problem statement. Also the python code allows user to dynamically input the user and expenditure details and obtain the respective split.
+
+Please note-:
+The solution does not cover the API and the DB storage functionality.
+
+
+
+However a suitable database schema for this application can be as follows--
+
+Table1---User:
+Columns:
+user_id (Primary Key)
+name
+email
+mobile_number
+
+
+Table2--Spend:
+expense_id (Primary Key)
+payer_id (References from table User)
+amount
+expense_type
+
+Table3--Splits:
+split_id (Primary Key)
+expense_id (references from Spend)
+user_id (references from User)
+amount
